@@ -7,6 +7,16 @@ const app = createApp({
       name: "",
     };
   },
+  computed: {
+    fullName() {
+      console.log('running again...')
+      if (this.name === "") {
+        return;
+      }
+      return this.name + ' ' + 'Mobile/Web Dev';
+    }
+  },
+  // utiliser les methodes uniquement pour calculer les values ou pour declencher les events
   methods: {
     outputFullName() {
       // console.log('running again...') // les methodes ne sont pas la meilleur solution 
